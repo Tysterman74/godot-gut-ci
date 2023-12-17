@@ -38,12 +38,10 @@ fi
 ls
 
 echo Build debug
-$GODOT_BIN --path $PWD --export-debug export_presets $PWD
+$GODOT_BIN -d --path $PWD --export-debug export_presets $PWD
 
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
-
-pathToGodotProjectFile="/project.godot"
 
 TEMP_FILE=/tmp/gut.log
 $GODOT_BIN -d -s $GODOT_PARAMS --path $PWD addons/gut/gut_cmdln.gd -gexit $GUT_PARAMS 2>&1 | tee $TEMP_FILE
