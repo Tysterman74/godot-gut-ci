@@ -31,6 +31,7 @@ fi
 
 # Run the tests
 if [[ -n $PROJECT_PATH ]]; then
+  echo "Navigate to project path"
   cd $PROJECT_PATH
 fi
 
