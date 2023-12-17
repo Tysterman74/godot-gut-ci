@@ -35,7 +35,11 @@ if [[ -n $PROJECT_PATH ]]; then
   cd $PROJECT_PATH
 fi
 
-echo "PROJECT PATH $PROJECT_PATH"
+target = "$PWD"
+for file in target
+do 
+  echo $(basename $file)
+done
 
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
