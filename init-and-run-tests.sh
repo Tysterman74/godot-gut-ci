@@ -35,7 +35,7 @@ if [[ -n $PROJECT_PATH ]]; then
   cd $PROJECT_PATH
 fi
 
-target = "$PWD"
+target="$PWD"
 for file in target
 do 
   echo $(basename $file)
