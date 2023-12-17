@@ -40,8 +40,10 @@ ls
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
 
+pathToGodotProjectFile="$PWD/project.godot"
+
 TEMP_FILE=/tmp/gut.log
-$GODOT_BIN -d -s $GODOT_PARAMS --path $PWD addons/gut/gut_cmdln.gd -gexit $GUT_PARAMS 2>&1 | tee $TEMP_FILE
+$GODOT_BIN -d -s $GODOT_PARAMS --path $pathToGodotProjectFile addons/gut/gut_cmdln.gd -gexit $GUT_PARAMS 2>&1 | tee $TEMP_FILE
 
 # Godot always exists with error 0, but we want this action to fail in case of errors
 if grep -q "No tests ran" "$TEMP_FILE";
