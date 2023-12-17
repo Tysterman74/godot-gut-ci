@@ -37,8 +37,8 @@ fi
 
 ls
 
-echo Importing all the things
-$GODOT_BIN -e
+echo Build debug
+$GODOT_BIN --path $PWD --export-debug export_presets $PWD
 
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
