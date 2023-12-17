@@ -34,6 +34,8 @@ if [[ -n $PROJECT_PATH ]]; then
   cd $PROJECT_PATH
 fi
 
+echo "PROJECT PATH $PROJECT_PATH"
+
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
 
