@@ -38,7 +38,7 @@ fi
 ls
 
 echo Build debug
-$GODOT_BIN -d --path $PWD --export-debug export_presets $PWD
+$GODOT_BIN --headless -d --path $PWD --export-debug export_presets $PWD
 
 echo Running GUT tests using params:
 echo "  -> $GUT_PARAMS"
